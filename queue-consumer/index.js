@@ -81,7 +81,7 @@ async function processMessage(message) {
   console.log(`${message.MessageId} - Received`);
 
   var waitPeriod = Number(message.Body);
-  if (waitPeriod === NaN) {
+  if (Number.isNaN(waitPeriod)) {
     waitPeriod = 1000;
   }
 
